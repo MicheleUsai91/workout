@@ -1,0 +1,47 @@
+html {
+    font: 18px/1 'Open Sans', monospace;
+}
+
+table {
+    text-align: left;
+}
+
+thead th {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+tbody th {
+    font-weight: normal;
+}
+
+tr {
+    vertical-align: top;
+}
+
+tr:nth-of-type(2n) {
+    background: rgb(240, 240,240);
+}
+
+th, td {
+    padding: 10px;
+}
+
+.menu {
+    display: flex;
+    margin: auto;
+}
+
+h3 {
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.result {
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}

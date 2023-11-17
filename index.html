@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#x1f4aa;</text></svg>"><!--href="./Bookmarks.svg"-->
+</head>
+
+<body>
+    <h1>MASSIMALE</h1>
+    <input type="number" id="pesoMassimale" placeholder="Peso...">
+    <input type="number" id="repsMassimale" placeholder="Ripetizioni...">
+    <p class="result" onclick="calcoloMassimale()" style="cursor: pointer;"><b>result</b> <span id="resMassimale" style="color: red"></span></p>
+
+    <h1>RIPETIZIONI</h1>
+    <input type="number" id="pesoReps" placeholder="Massimale...">
+    <input type="number" id="repsReps" placeholder="Ripetizioni...">
+    <p class="result" onclick="calcoloReps()" style="cursor: pointer;"><b>result</b> <span id="resReps" style="color: red"></span></p>
+
+    <h1>VOLUME</h1>
+    <input type="number" id="pesoVol" placeholder="Peso...">
+    <input type="number" id="repsVol" placeholder="Ripetizioni...">
+    <p class="result" onclick="volume()"><b>result</b> <span id="resVol" style="color: red"></span></p>
+
+    <h1>WEIGHT CONVERTER</h1>
+    <input type="number" id="pesoConv" placeholder="Peso...">
+    <div class="result">
+        <label for="kg">KG</label>
+        <input type="radio" id="kg" name="kgToLbs" value="kg" checked>
+        <label for="lbs">LBS</label>
+        <input type="radio" id="lbs" name="kgToLbs" value="lbs">
+    </div>
+    <p class="result" onclick="weightConverter()">result <span id="resConv" style="color: red"></span></p>
+
+    <h1>WORKOUT ROUTINE</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>GIORNO</th>
+                <th>ATTIVIT&agrave;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>LUN</td>
+                <td><b>Gym</b> = Petto - Tricipiti - Glutei</td>
+            </tr>
+            <tr>
+                <td>MAR</td>
+                <td>Nuoto</td>
+            </tr>
+            <tr>
+                <td>MER</td>
+                <td><b>Gym</b> = Dorso - Bicipiti - Hamstrings</td>
+            </tr>
+            <tr>
+                <td>GIO</td>
+                <td>Nuoto</td>
+            </tr>
+            <tr>
+                <td>VEN</td>
+                <td><b>Gym</b> = Spalle - Trapezio - Quadricipiti</td>
+            </tr>
+            <tr>
+                <td>SAB</td>
+                <td>Nuoto</td>
+            </tr>
+            <tr>
+                <td>DOM</td>
+                <td>Stretching - Yoga - Sacco</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>PLAN</h1>
+    <div class="menu">
+        <h3><a onclick="showTable('warm')">WARM UP</a></h3>
+        <h3><a onclick="showTable('lun')">LUN</a></h3>
+        <h3><a onclick="showTable('mer')">MER</a></h3>
+        <h3><a onclick="showTable('ven')">VEN</a></h3>
+    </div>
+
+    <table id="table-warm" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+                <th>NOTE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cardio</td>
+                <td>1</td>
+                <td>15'</td>
+                <td>Corsa - Vogatore</td>
+            </tr>
+            <tr>
+                <td>Abs</td>
+                <td>9</td>
+                <td>max</td>
+                <td>3 Retto - 3 Lat - 3 Iso</td>
+            </tr>
+            <tr>
+                <td>Mobility</td>
+                <td>1</td>
+                <td>10'</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-lun" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>MAX</th>
+                <th>KG</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Panca Inclinata Manubri</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Croci Cavi</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Tricipiti</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Pressa</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Hip-Trust</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-mer" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>MAX</th>
+                <th>KG</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lat Machine	</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Pulley</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Bicipiti</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Stacchi</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Curl</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-ven" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>MAX</th>
+                <th>KG</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Military Press</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Aperture Posteriori</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Trapezio</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Affondi</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Extension</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
