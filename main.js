@@ -1,11 +1,3 @@
-function showTable(id) {
-    const tables = document.querySelectorAll("[id^='table-']");
-    tables.forEach(t => {
-        t.hidden = t.id.includes(id) ? !t.hidden : true;
-    })
-    // table.hidden = !table.hidden;
-}
-
 function calcoloMassimale() {
     let kg = document.getElementById("pesoMassimale").value;
     let reps = document.getElementById("repsMassimale").value;
@@ -30,3 +22,19 @@ function weightConverter() {
     let factor = type === "kg" ? 1.0 / 2.2046 : 2.2046;
     document.getElementById("resConv").innerHTML = Math.round(weight * factor);
 }
+
+function showTable(id) {
+    const t = document.querySelectorAll("[id^='table-']");
+    const h = document.querySelectorAll("[id^='h-']");
+    for (var i=0; i<t.length; i++) {
+        t[i].hidden = t[i].id.includes(id) ? !t[i].hidden : true;
+        h[i].style = h[i].id.includes(id) ? "border-bottom: 2px solid black" : "";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const ids = ["dom", "lun", "mar", "mer", "gio", "ven", "sab"];
+    const day = new Date().getDay();
+    const id = day % 2 == 0 ? "warm" : ids[day];
+    showTable(id);
+})
