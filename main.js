@@ -35,6 +35,6 @@ function showTable(id) {
 document.addEventListener("DOMContentLoaded", function () {
     const ids = ["dom", "lun", "mar", "mer", "gio", "ven", "sab"];
     const day = new Date().getDay();
-    const id = day % 2 == 0 ? "warm" : ids[day];
+    const id = ids[day];
     showTable(id);
 })

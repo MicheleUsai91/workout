@@ -11,79 +11,16 @@
 </head>
 
 <body>
-    <h1>MASSIMALE</h1>
-    <input type="number" id="pesoMassimale" placeholder="Peso...">
-    <input type="number" id="repsMassimale" placeholder="Ripetizioni...">
-    <p class="result" onclick="calcoloMassimale()" style="cursor: pointer;"><b>result</b> <span id="resMassimale" style="color: red"></span></p>
-
-    <h1>RIPETIZIONI</h1>
-    <input type="number" id="pesoReps" placeholder="Massimale...">
-    <input type="number" id="repsReps" placeholder="Ripetizioni...">
-    <p class="result" onclick="calcoloReps()" style="cursor: pointer;"><b>result</b> <span id="resReps" style="color: red"></span></p>
-
-    <h1>VOLUME</h1>
-    <input type="number" id="pesoVol" placeholder="Peso...">
-    <input type="number" id="repsVol" placeholder="Ripetizioni...">
-    <p class="result" onclick="volume()"><b>result</b> <span id="resVol" style="color: red"></span></p>
-
-    <h1>WEIGHT CONVERTER</h1>
-    <input type="number" id="pesoConv" placeholder="Peso...">
-    <div class="result">
-        <label for="kg">LBS TO KG</label>
-        <input type="radio" id="kg" name="kgToLbs" value="kg" checked>
-    </div>
-    <div class="result">
-        <label for="lbs">KG TO LBS</label>
-        <input type="radio" id="lbs" name="kgToLbs" value="lbs">
-    </div>
-    <p class="result" onclick="weightConverter()">result <span id="resConv" style="color: red"></span></p>
-
-    <h1>WORKOUT ROUTINE</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>GIORNO</th>
-                <th>ATTIVIT&agrave;</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>LUN</td>
-                <td><b>Gym</b> = Petto - Tricipiti - Glutei</td>
-            </tr>
-            <tr>
-                <td>MAR</td>
-                <td>Nuoto</td>
-            </tr>
-            <tr>
-                <td>MER</td>
-                <td><b>Gym</b> = Dorso - Bicipiti - Hamstrings</td>
-            </tr>
-            <tr>
-                <td>GIO</td>
-                <td>Nuoto</td>
-            </tr>
-            <tr>
-                <td>VEN</td>
-                <td><b>Gym</b> = Spalle - Trapezio - Quadricipiti</td>
-            </tr>
-            <tr>
-                <td>SAB</td>
-                <td>Nuoto</td>
-            </tr>
-            <tr>
-                <td>DOM</td>
-                <td>Stretching - Yoga - Sacco</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h1>PLAN</h1>
+    <h1>ROUTINE</h1>
     <div class="menu">
         <h3 id="h-warm"><a onclick="showTable('warm')">WARM UP</a></h3>
         <h3 id="h-lun"><a onclick="showTable('lun')">LUN</a></h3>
+        <h3 id="h-mar"><a onclick="showTable('mar')">MAR</a></h3>
         <h3 id="h-mer"><a onclick="showTable('mer')">MER</a></h3>
+        <h3 id="h-gio"><a onclick="showTable('gio')">GIO</a></h3>
         <h3 id="h-ven"><a onclick="showTable('ven')">VEN</a></h3>
+        <h3 id="h-sab"><a onclick="showTable('sab')">SAB</a></h3>
+        <h3 id="h-dom"><a onclick="showTable('dom')">DOM</a></h3>
     </div>
 
     <table id="table-warm" hidden>
@@ -166,6 +103,23 @@
         </tbody>
     </table>
 
+    <table id="table-mar" hidden>
+        <thead>
+            <tr>
+                <th>NUOTO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stile libero</td>
+                <td>10 - 20</td>
+                <td>50m</td>
+            </tr>
+        </tbody>
+    </table>
+
     <table id="table-mer" hidden>
         <thead>
             <tr>
@@ -215,7 +169,66 @@
         </tbody>
     </table>
 
+    <table id="table-gio" hidden>
+        <thead>
+            <tr>
+                <th>NUOTO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dorso</td>
+                <td>10</td>
+                <td>50m</td>
+            </tr>
+        </tbody>
+    </table>
+
     <table id="table-ven" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>MAX</th>
+                <th>KG</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Panca Piana</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Trazioni</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>max</td>
+            </tr>
+            <tr>
+                <td>Squat</td>
+                <td></td>
+                <td></td>
+                <td>5</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Alzate Laterali</td>
+                <td></td>
+                <td></td>
+                <td>4</td>
+                <td>max</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-sab" hidden>
         <thead>
             <tr>
                 <th>ESECIZIO</th>
@@ -262,6 +275,74 @@
                 <td>8</td>
             </tr>
         </tbody>
+        <thead>
+            <tr>
+                <th>NUOTO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Misto</td>
+                <td>10 - 20</td>
+                <td>50m</td>
+            </tr>
+        </tbody>
     </table>
+
+    <table id="table-dom" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Stretching - Yoga</td>
+                <td>1</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Abs</td>
+                <td>10</td>
+                <td>max</td>
+            </tr>
+            <tr>
+                <td>Sacco</td>
+                <td>5</td>
+                <td>3'</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>MASSIMALE</h1>
+    <input type="number" id="pesoMassimale" placeholder="Peso...">
+    <input type="number" id="repsMassimale" placeholder="Ripetizioni...">
+    <p class="result" onclick="calcoloMassimale()" style="cursor: pointer;"><b>result</b> <span id="resMassimale" style="color: red"></span></p>
+
+    <h1>RIPETIZIONI</h1>
+    <input type="number" id="pesoReps" placeholder="Massimale...">
+    <input type="number" id="repsReps" placeholder="Ripetizioni...">
+    <p class="result" onclick="calcoloReps()" style="cursor: pointer;"><b>result</b> <span id="resReps" style="color: red"></span></p>
+
+    <h1>VOLUME</h1>
+    <input type="number" id="pesoVol" placeholder="Peso...">
+    <input type="number" id="repsVol" placeholder="Ripetizioni...">
+    <p class="result" onclick="volume()"><b>result</b> <span id="resVol" style="color: red"></span></p>
+
+    <h1>WEIGHT CONVERTER</h1>
+    <input type="number" id="pesoConv" placeholder="Peso...">
+    <div class="result">
+        <label for="kg">LBS TO KG</label>
+        <input type="radio" id="kg" name="kgToLbs" value="kg" checked>
+    </div>
+    <div class="result">
+        <label for="lbs">KG TO LBS</label>
+        <input type="radio" id="lbs" name="kgToLbs" value="lbs">
+    </div>
+    <p class="result" onclick="weightConverter()">result <span id="resConv" style="color: red"></span></p>
 </body>
 </html>
