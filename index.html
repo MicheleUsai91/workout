@@ -12,20 +12,17 @@
 
 <body>
     <h1>ROUTINE</h1>
-    <h2>11/12/2023</h2>
-    <h2>22/01/2023</h2>
+    <h2>18/12/2023</h2>
+    <h2>29/01/2023</h2>
     <div class="menu">
         <h3 id="h-warm"><a onclick="showTable('warm')">WARM UP</a></h3>
-        <h3 id="h-lun"><a onclick="showTable('lun')">LUN</a></h3>
-        <h3 id="h-mar"><a onclick="showTable('mar')">MAR</a></h3>
-        <h3 id="h-mer"><a onclick="showTable('mer')">MER</a></h3>
+        <h3 id="h-lun_mer"><a onclick="showTable('lun_mer')">LUN-MER</a></h3>
+        <h3 id="h-ven_dom"><a onclick="showTable('ven_dom')">VEN-DOM</a></h3>
     </div>
-
     <div class="menu">
+        <h3 id="h-mar"><a onclick="showTable('mar')">MAR</a></h3>
         <h3 id="h-gio"><a onclick="showTable('gio')">GIO</a></h3>
-        <h3 id="h-ven"><a onclick="showTable('ven')">VEN</a></h3>
         <h3 id="h-sab"><a onclick="showTable('sab')">SAB</a></h3>
-        <h3 id="h-dom"><a onclick="showTable('dom')">DOM</a></h3>
     </div>
 
     <table id="table-warm" hidden>
@@ -59,7 +56,24 @@
         </tbody>
     </table>
 
-    <table id="table-lun" hidden>
+    <table id="table-lun_mer" hidden>
+        <thead>
+            <tr>
+                <th>NUOTO - 10/20 VASCHE</th>
+                <!-- <th>SERIE</th>
+                <th>REPS</th> -->
+            </tr>
+        </thead>
+        <!-- <tbody>
+            <tr>
+                <td>Nuoto</td>
+                <td>10 - 20</td>
+                <td>50m</td>
+            </tr>
+        </tbody> -->
+    </table>
+
+    <table id="table-mar" hidden>
         <thead>
             <tr>
                 <th>ESECIZIO</th>
@@ -72,8 +86,8 @@
         <tbody>
             <tr>
                 <td>Panca Piana</td>
-                <td></td>
-                <td></td>
+                <td>93</td>
+                <td>81</td>
                 <td>5</td>
                 <td>5</td>
             </tr>
@@ -90,58 +104,6 @@
                 <td></td>
                 <td>5</td>
                 <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-mar" hidden>
-        <thead>
-            <tr>
-                <th>ESECIZIO</th>
-                <th>MAX</th>
-                <th>KG</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Military Press</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Stacchi</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Rematore</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-mer" hidden>
-        <thead>
-            <tr>
-                <th>NUOTO</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Stile libero</td>
-                <td>10 - 20</td>
-                <td>50m</td>
             </tr>
         </tbody>
     </table>
@@ -158,41 +120,6 @@
         </thead>
         <tbody>
             <tr>
-                <td>Panca Piana</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Squat</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Trazioni</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-ven" hidden>
-        <thead>
-            <tr>
-                <th>ESECIZIO</th>
-                <th>MAX</th>
-                <th>KG</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
                 <td>Military Press</td>
                 <td></td>
                 <td></td>
@@ -201,15 +128,15 @@
             </tr>
             <tr>
                 <td>Stacchi</td>
-                <td></td>
-                <td></td>
+                <td>123</td>
+                <td>108</td>
                 <td>5</td>
                 <td>5</td>
             </tr>
             <tr>
                 <td>Rematore</td>
-                <td></td>
-                <td></td>
+                <td>70</td>
+                <td>61</td>
                 <td>5</td>
                 <td>5</td>
             </tr>
@@ -220,8 +147,8 @@
         <thead>
             <tr>
                 <th>ESECIZIO</th>
-                <th>MAX</th>
-                <th>KG</th>
+                <!-- <th>MAX</th>
+                <th>KG</th> -->
                 <th>SERIE</th>
                 <th>REPS</th>
             </tr>
@@ -229,78 +156,64 @@
         <tbody>
             <tr>
                 <td>Croci Panca Inclinata</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
             <tr>
                 <td>Leg Extension</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
             <tr>
                 <td>Aperture Posteriori</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
-                <td>8</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>Leg Curl</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
             <tr>
                 <td>Trapezio</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
             <tr>
                 <td>Glutei</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
-                <td>8</td>
+                <td>6</td>
             </tr>
             <tr>
                 <td>Bicipiti</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
             <tr>
                 <td>Tricipiti</td>
-                <td></td>
-                <td></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
                 <td>4</td>
                 <td>6</td>
             </tr>
         </tbody>
-        <thead>
-            <tr>
-                <th>NUOTO</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Misto</td>
-                <td>10 - 20</td>
-                <td>50m</td>
-            </tr>
-        </tbody>
     </table>
 
-    <table id="table-dom" hidden>
+    <table id="table-ven_dom" hidden>
         <thead>
             <tr>
                 <th>ESECIZIO</th>
@@ -327,31 +240,34 @@
         </tbody>
     </table>
 
-    <h1>MASSIMALE</h1>
-    <input type="number" id="pesoMassimale" placeholder="Peso...">
-    <input type="number" id="repsMassimale" placeholder="Ripetizioni...">
-    <p class="result" onclick="calcoloMassimale()" style="cursor: pointer;"><b>result</b> <span id="resMassimale" style="color: red"></span></p>
-
-    <h1>RIPETIZIONI</h1>
-    <input type="number" id="pesoReps" placeholder="Massimale...">
-    <input type="number" id="repsReps" placeholder="Ripetizioni...">
-    <p class="result" onclick="calcoloReps()" style="cursor: pointer;"><b>result</b> <span id="resReps" style="color: red"></span></p>
-
-    <h1>VOLUME</h1>
-    <input type="number" id="pesoVol" placeholder="Peso...">
-    <input type="number" id="repsVol" placeholder="Ripetizioni...">
-    <p class="result" onclick="volume()"><b>result</b> <span id="resVol" style="color: red"></span></p>
-
-    <h1>WEIGHT CONVERTER</h1>
-    <input type="number" id="pesoConv" placeholder="Peso...">
-    <div class="result">
-        <label for="kg">LBS TO KG</label>
-        <input type="radio" id="kg" name="kgToLbs" value="kg" checked>
+    <h1 style="cursor: pointer"><a onclick="showUtilities()">UTILITIES</a></h1>
+    <div id="utilities" hidden>
+        <h2>MASSIMALE</h2>
+        <input type="number" id="pesoMassimale" placeholder="Peso...">
+        <input type="number" id="repsMassimale" placeholder="Ripetizioni...">
+        <p class="result" onclick="calcoloMassimale()" style="cursor: pointer;"><b>result</b> <span id="resMassimale" style="color: red"></span></p>
+    
+        <h2>RIPETIZIONI</h2>
+        <input type="number" id="pesoReps" placeholder="Massimale...">
+        <input type="number" id="repsReps" placeholder="Ripetizioni...">
+        <p class="result" onclick="calcoloReps()" style="cursor: pointer;"><b>result</b> <span id="resReps" style="color: red"></span></p>
+    
+        <h2>VOLUME</h2>
+        <input type="number" id="pesoVol" placeholder="Peso...">
+        <input type="number" id="repsVol" placeholder="Ripetizioni...">
+        <p class="result" onclick="volume()"><b>result</b> <span id="resVol" style="color: red"></span></p>
+    
+        <h2>WEIGHT CONVERTER</h2>
+        <input type="number" id="pesoConv" placeholder="Peso...">
+        <div class="result">
+            <label for="kg">LBS TO KG</label>
+            <input type="radio" id="kg" name="kgToLbs" value="kg" checked>
+        </div>
+        <div class="result">
+            <label for="lbs">KG TO LBS</label>
+            <input type="radio" id="lbs" name="kgToLbs" value="lbs">
+        </div>
+        <p class="result" onclick="weightConverter()">result <span id="resConv" style="color: red"></span></p>
     </div>
-    <div class="result">
-        <label for="lbs">KG TO LBS</label>
-        <input type="radio" id="lbs" name="kgToLbs" value="lbs">
-    </div>
-    <p class="result" onclick="weightConverter()">result <span id="resConv" style="color: red"></span></p>
 </body>
 </html>

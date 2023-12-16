@@ -32,6 +32,11 @@ function showTable(id) {
     }
 }
 
+function showUtilities() {
+    const divUt = document.getElementById("utilities");
+    divUt.hidden = !divUt.hidden;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const ids = ["dom", "lun", "mar", "mer", "gio", "ven", "sab"];
     const day = new Date().getDay();
