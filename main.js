@@ -37,9 +37,25 @@ function showUtilities() {
     divUt.hidden = !divUt.hidden;
 }
 
+function calcEndDate(start) {
+    let weeks = 6;
+    let parts = start.split("/");
+    let day = parseInt(parts[0], 10);
+    let month = parseInt(parts[1], 10) - 1;
+    let year = parseInt(parts[2], 10);
+    let startDate = new Date(year, month, day);
+    let finalDate = new Date(startDate.getTime() + weeks * 7 * 24 * 60 * 60 * 1000);
+    return finalDate.toLocaleDateString("en-GB");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const ids = ["dom", "lun", "mar", "mer", "gio", "ven", "sab"];
     const day = new Date().getDay();
     const id = ids[day];
     showTable(id);
+
+    const startDate = document.getElementById("start_date").innerHTML;
+    const finalDate = calcEndDate(startDate);
+    const end = document.getElementById("end_date");
+    end.innerHTML = finalDate;
 })

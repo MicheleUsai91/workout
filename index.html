@@ -12,17 +12,18 @@
 
 <body>
     <h1>ROUTINE</h1>
-    <h2>18/12/2023</h2>
-    <h2>29/01/2023</h2>
+    <h2 id="start_date">04/03/2023</h2>
+    <h2 id="end_date"></h2>
     <div class="menu">
         <h3 id="h-warm"><a onclick="showTable('warm')">WARM UP</a></h3>
-        <h3 id="h-lun_mer"><a onclick="showTable('lun_mer')">LUN-MER</a></h3>
-        <h3 id="h-ven_dom"><a onclick="showTable('ven_dom')">VEN-DOM</a></h3>
+        <h3 id="h-mer_sab"><a onclick="showTable('mer_sab')">MER-SAB</a></h3>
+        <h3 id="h-dom"><a onclick="showTable('dom')">DOM</a></h3>
     </div>
     <div class="menu">
+        <h3 id="h-lun"><a onclick="showTable('lun')">LUN</a></h3>
         <h3 id="h-mar"><a onclick="showTable('mar')">MAR</a></h3>
         <h3 id="h-gio"><a onclick="showTable('gio')">GIO</a></h3>
-        <h3 id="h-sab"><a onclick="showTable('sab')">SAB</a></h3>
+        <h3 id="h-ven"><a onclick="showTable('ven')">VEN</a></h3>
     </div>
 
     <table id="table-warm" hidden>
@@ -56,164 +57,15 @@
         </tbody>
     </table>
 
-    <table id="table-lun_mer" hidden>
+    <table id="table-mer_sab" hidden>
         <thead>
             <tr>
                 <th>NUOTO - 10/20 VASCHE</th>
-                <!-- <th>SERIE</th>
-                <th>REPS</th> -->
             </tr>
         </thead>
-        <!-- <tbody>
-            <tr>
-                <td>Nuoto</td>
-                <td>10 - 20</td>
-                <td>50m</td>
-            </tr>
-        </tbody> -->
     </table>
 
-    <table id="table-mar" hidden>
-        <thead>
-            <tr>
-                <th>ESECIZIO</th>
-                <th>MAX</th>
-                <th>KG</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Panca Piana</td>
-                <td>93</td>
-                <td>81</td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Squat</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Trazioni</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-gio" hidden>
-        <thead>
-            <tr>
-                <th>ESECIZIO</th>
-                <th>MAX</th>
-                <th>KG</th>
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Military Press</td>
-                <td></td>
-                <td></td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Stacchi</td>
-                <td>123</td>
-                <td>108</td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>Rematore</td>
-                <td>70</td>
-                <td>61</td>
-                <td>5</td>
-                <td>5</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-sab" hidden>
-        <thead>
-            <tr>
-                <th>ESECIZIO</th>
-                <!-- <th>MAX</th>
-                <th>KG</th> -->
-                <th>SERIE</th>
-                <th>REPS</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Croci Panca Inclinata</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Leg Extension</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Aperture Posteriori</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Leg Curl</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Trapezio</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Glutei</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Bicipiti</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-            <tr>
-                <td>Tricipiti</td>
-                <!-- <td></td> -->
-                <!-- <td></td> -->
-                <td>4</td>
-                <td>6</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table id="table-ven_dom" hidden>
+    <table id="table-dom" hidden>
         <thead>
             <tr>
                 <th>ESECIZIO</th>
@@ -222,6 +74,11 @@
             </tr>
         </thead>
         <tbody>
+            <tr>
+                <td>Corsa</td>
+                <td>1</td>
+                <td>5 - 10 km</td>
+            </tr>
             <tr>
                 <td>Stretching<br>Yoga</td>
                 <td>1</td>
@@ -236,6 +93,194 @@
                 <td>Sacco</td>
                 <td>5</td>
                 <td>3'</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-lun" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Panca Inclinata</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Croci</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Squat</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Extension</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Lat Machine</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Aperture Post</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Tricipiti Dip</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-mar" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Military Press</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Alzate Laterali</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Stacchi</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Curl</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Rematore Manubrio</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Pulley</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Bicipiti Panca Inclinata</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-gio" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chest Press</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Panca Inclinta Manubri</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Affondi</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Extension</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Trazioni Peso</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Trapezio</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Tricipiti Ercolina</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="table-ven" hidden>
+        <thead>
+            <tr>
+                <th>ESECIZIO</th>
+                <th>SERIE</th>
+                <th>REPS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alzate Frontali</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Tirate Al Mento</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Hip Trust</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Leg Curl</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Rematore Bilanciere</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Pull Over</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Bicipiti Lat Machine</td>
+                <td>5</td>
+                <td>8</td>
             </tr>
         </tbody>
     </table>
